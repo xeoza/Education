@@ -1,0 +1,188 @@
+«‡‰‡˜‡ 1
+	‘¿…À lr05-1-1.asm
+EXTRN output_X: near
+
+STK SEGMENT PARA STACK 'STACK'
+	db 100 dup(0)
+STK ENDS
+
+DSEG SEGMENT PARA PUBLIC 'DATA'
+	X db 'R'
+DSEG ENDS
+
+CSEG SEGMENT PARA PUBLIC 'CODE'
+	assume CS:CSEG, DS:DSEG, SS:STK
+main:
+	mov ax, DSEG
+	mov ds, ax
+
+	call output_X	
+
+	mov ax, 4c00h
+	int 21h
+CSEG ENDS
+
+PUBLIC X
+
+END main
+
+	‘¿…À lr05-1-2.asm
+PUBLIC output_X
+EXTRN X: byte
+
+DS2 SEGMENT AT 0b800h
+	CA LABEL byte
+	ORG 80 * 2 * 2 + 2 * 2
+	SYMB LABEL word
+DS2 ENDS
+
+CSEG SEGMENT PARA PUBLIC 'CODE'
+	assume CS:CSEG, ES:DS2
+output_X proc near
+	mov ax, DS2
+	mov es, ax
+	mov ah, 10
+	mov al, X
+	mov symb, ax
+	ret
+output_X endp
+CSEG ENDS
+END
+
+«‡‰‡˜‡ 2
+	‘¿…À lr05-2-1.asm
+STK SEGMENT para STACK 'STACK'
+	db 100 dup(0)
+STK ENDS
+
+SD1 SEGMENT para common 'DATA'
+	W dw 3444h
+SD1 ENDS
+END
+
+	‘¿…À lr05-2-2.asm
+SD1 SEGMENT para common 'DATA'
+	C1 LABEL byte
+	ORG 1h
+	C2 LABEL byte
+SD1 ENDS
+
+CSEG SEGMENT para 'CODE'
+	ASSUME CS:CSEG, DS:SD1
+main:
+	mov ax, SD1
+	mov ds, ax
+	mov ah, 2
+	mov dl, C1
+	int 21h
+	mov dl, C2
+	int 21h
+	mov ax, 4c00h
+	int 21h
+CSEG ENDS
+END main
+
+«‡‰‡˜‡ 3
+	‘¿…À lr05-3-1.asm
+SD1 SEGMENT para public 'DATA'
+	S1 db 'Y'
+	db 65535 - 2 dup (0)
+SD1 ENDS
+
+SD2 SEGMENT para public 'DATA'
+	S2 db 'E'
+	db 65535 - 2 dup (0)
+SD2 ENDS
+
+SD3 SEGMENT para public 'DATA'
+	S3 db 'S'
+	db 65535 - 2 dup (0)
+SD3 ENDS
+
+CSEG SEGMENT para public 'CODE'
+	assume CS:CSEG, DS:SD1
+output:
+	mov ah, 2
+	int 21h
+	mov dl, 13
+	int 21h
+	mov dl, 10
+	int 21h
+	ret
+main:
+	mov ax, SD1
+	mov ds, ax
+	mov dl, S1
+	call output
+assume DS:SD2
+	mov ax, SD2
+	mov ds, ax
+	mov dl, S2
+	call output
+assume DS:SD3
+	mov ax, SD3
+	mov ds, ax
+	mov dl, S3
+	call output
+	
+	mov ax, 4c00h
+	int 21h
+CSEG ENDS
+END main
+
+«‡‰‡˜‡ 4
+	‘¿…À lr05-4-1.asm
+PUBLIC X
+EXTRN exit: far
+
+SSTK SEGMENT para STACK 'STACK'
+	db 100 dup(0)
+SSTK ENDS
+
+SD1 SEGMENT para public 'DATA'
+	X db 'X'
+SD1 ENDS
+
+SC1 SEGMENT para public 'CODE'
+	assume CS:SC1, DS:SD1
+main:
+	mov ax, SD1
+	mov ds, ax
+	
+	jmp exit
+SC1 ENDS
+END main
+
+	‘¿…À lr05-4-2.asm
+EXTRN X: byte
+PUBLIC exit
+
+SD2 SEGMENT para 'DATA'
+	Y db 'Y'
+SD2 ENDS
+
+SC2 SEGMENT para public 'CODE'
+	assume CS:SC2, DS:SD2
+exit:
+	mov bx, ds
+	mov ax, SD2
+	mov ds, ax
+	mov ah, 2
+	mov dl, Y
+	int 21h	
+	
+	mov ah, Y
+	mov ds, bx
+	mov al, X
+	xchg ah, al
+	mov X, al
+	mov ax, SD2
+	mov ds, ax
+	mov Y, ah
+	
+	mov ax, 4c00h
+	int 21h
+SC2 ENDS
+END
+
+
