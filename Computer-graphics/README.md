@@ -6,7 +6,7 @@
 |[2D transformations](transformations-2d/README.md)|✅|
 |[Line drawing algorithm](line-drawing/README.md)|✅|
 |[Ellips and circle drawing algorithm](ellips-drawing/README.md)|✅|
-|[Filling](filling/README.md)|✅|
+|[Filling](filling/)|✅|
 |[Line clipping](line-clipping/README.md)|✅|
 
 ### Used technologies  
