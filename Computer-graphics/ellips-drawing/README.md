@@ -37,12 +37,12 @@ This can be decided by the decision parameter d.
 
 # Middle point algorithm
 
-`If PK < 0 then next point on circle (0,0) is (XK+1,YK) and
-   PK+1 = PK + 2XK+1 + 1
+If PK < 0 then next point on circle (0,0) is (XK+1,YK) and
+   * PK+1 = PK + 2XK+1 + 1
 Else
-   PK+1 = PK + 2XK+1 + 1 – 2YK+1
+   * PK+1 = PK + 2XK+1 + 1 – 2YK+1
 	
-Where, 2XK+1 = 2XK+2 and 2YK+1 = 2YK-2.`
+Where, 2XK+1 = 2XK+2 and 2YK+1 = 2YK-2.
 
 Repeat until X >= Y.
 

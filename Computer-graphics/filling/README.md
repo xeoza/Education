@@ -8,17 +8,26 @@
 |[XOR](xor/README.md)|✅|
 |[XOR with partition]()|🌀|
 
+#### <i>Legend:</i>
+<ul>
+<li>✅ - ОК
+<li>⚠️ - problem
+<li>🆘 - need help
+<li>♻️ - need update(see issues)
+<li>🌀 - in process
+</ul>
+
 # Scanline
 
 <p align="center">
-  <img src="images/Scanline.jpg" height="350">
+  <img src="images/Scanline.png" height="350">
 </p>
 
 <p align="center">
   <img src="images/ScanlineProblems.png" height="350">
 </p>
 
-#Flood fill
+# Flood fill
 
 <p align="center">
   <img src="images/FloodFill4.gif" height="350">
@@ -41,13 +50,13 @@
 # XOR
 
 <p align="center">
-  <img src="images/XOR.png" height="350">
+  <img src="images/XOR.png">
 </p>
 
 # XOR with partition
 
 <p align="center">
-  <img src="images/XORWithPartition.png" height="350">
+  <img src="images/XORWithPartition.png">
 </p>
 
 
