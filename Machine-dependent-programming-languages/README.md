@@ -10,6 +10,9 @@
 |[Out video segment](out-segment/)|✅|
 |[Number system conversion](number-system-conversion/)|✅|
 |[Macroinstruction](macro/)|✅|
+|[Count words](count-words/)|✅|
+|[Small book library](small-library/)|✅|
+
 
 #### <i>Legend:</i>
 <ul>
@@ -22,5 +25,6 @@
 
 ### Used technologies  
 * MASM
+* C
 * C++
 * Visual Studo 
