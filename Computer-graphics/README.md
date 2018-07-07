@@ -1,6 +1,6 @@
 # Computer graphics
 
-| List of tasks  |     Stage     |
+| List of directions  |     Stage     |
 | ------------- |:-------------:|
 |[geometry](geometry/)|✅|
 |[2D transformations](transformations-2d/)|✅|
@@ -8,13 +8,6 @@
 |[Ellips and circle drawing algorithm](ellips-drawing/)|✅|
 |[Filling](filling/)|✅|
 |[Line clipping](line-clipping/)|✅|
-
-### Used technologies  
-* Python 3  
-  * numPy  
-  * SLGraphic
-  * PyQt5
-* tkinter
 
 #### <i>Legend:</i>
 <ul>
@@ -24,3 +17,11 @@
 <li>♻️ - need update(see issues)
 <li>🌀 - in process
 </ul>
+
+### Used technologies  
+* Python 3.6  
+  * numPy  
+  * SLGraphic
+  * PyQt5
+* tkinter
+
