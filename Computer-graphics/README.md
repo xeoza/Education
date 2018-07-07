@@ -2,12 +2,12 @@
 
 | List of tasks  |     Stage     |
 | ------------- |:-------------:|
-|[geometry](geometry/README.md)|✅|
-|[2D transformations](transformations-2d/README.md)|✅|
-|[Line drawing algorithm](line-drawing/README.md)|✅|
-|[Ellips and circle drawing algorithm](ellips-drawing/README.md)|✅|
+|[geometry](geometry/)|✅|
+|[2D transformations](transformations-2d/)|✅|
+|[Line drawing algorithm](line-drawing/)|✅|
+|[Ellips and circle drawing algorithm](ellips-drawing/)|✅|
 |[Filling](filling/)|✅|
-|[Line clipping](line-clipping/README.md)|✅|
+|[Line clipping](line-clipping/)|✅|
 
 ### Used technologies  
 * Python 3  

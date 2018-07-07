@@ -4,8 +4,8 @@
 | ------------- |:-------------:|
 |[Scanline]()|🌀|
 |[Flood fill]()|🌀|
-|[Scanline Flood fill](scanline-flood-fill/README.md)|✅|
-|[XOR](xor/README.md)|✅|
+|[Scanline Flood fill](scanline-flood-fill/)|✅|
+|[XOR](xor/)|✅|
 |[XOR with partition]()|🌀|
 
 #### <i>Legend:</i>
