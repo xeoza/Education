@@ -1,0 +1,46 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/zykinda/Documents/BMSTU/sparse-voxel-octrees/src/third-party/lz4.c
+lz4.h
+/Users/zykinda/Documents/BMSTU/sparse-voxel-octrees/src/third-party/lz4.h
+intrin.h
+-
+stdlib.h
+-
+string.h
+-
+stdint.h
+-
+
+/Users/zykinda/Documents/BMSTU/sparse-voxel-octrees/src/third-party/lz4.h
+
+/Users/zykinda/Documents/BMSTU/sparse-voxel-octrees/src/third-party/ply.h
+stdio.h
+-
+stddef.h
+-
+
+/Users/zykinda/Documents/BMSTU/sparse-voxel-octrees/src/third-party/plyfile.c
+stdio.h
+-
+stdlib.h
+-
+math.h
+-
+string.h
+-
+ply.h
+/Users/zykinda/Documents/BMSTU/sparse-voxel-octrees/src/third-party/ply.h
+
+/Users/zykinda/Documents/BMSTU/sparse-voxel-octrees/src/third-party/tribox3.c
+math.h
+-
+stdio.h
+-
+

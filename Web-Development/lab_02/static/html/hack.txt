@@ -1,0 +1,5 @@
+<head></head>
+	<body>
+	<h1>Hack page</h1>
+	<img src="http://localhost:80/img/image2.jpg">
+</body>

@@ -1,0 +1,13 @@
+Performing C++ SOURCE FILE Test check_cxx_compiler_flag__march_merom failed with the following output:
+Change Dir: /Users/zykinda/Documents/BMSTU/sparse-voxel-octrees/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_30db7/fast"
+/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_30db7.dir/build.make CMakeFiles/cmTC_30db7.dir/build
+Building CXX object CMakeFiles/cmTC_30db7.dir/src.cxx.o
+/Library/Developer/CommandLineTools/usr/bin/c++    -std=c++0x -Dcheck_cxx_compiler_flag__march_merom -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -march=merom -o CMakeFiles/cmTC_30db7.dir/src.cxx.o -c /Users/zykinda/Documents/BMSTU/sparse-voxel-octrees/build/CMakeFiles/CMakeTmp/src.cxx
+error: unknown target CPU 'merom'
+make[1]: *** [CMakeFiles/cmTC_30db7.dir/src.cxx.o] Error 1
+make: *** [cmTC_30db7/fast] Error 2
+
+Source file was:
+int main() { return 0; }

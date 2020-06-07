@@ -1,0 +1,26 @@
+name: Ubuntu Latest Build CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v1
+    - name: Ensure kmod is installed
+      run: sudo apt install kmod
+    - name: Install python3-setuptools and python3-dev
+      run: sudo apt install -y python3-setuptools python3-dev
+    - name: Ensure testinfra and ansible-inventory are installed
+      run: sudo pip3 install testinfra ansible
+    - name: Export role directory 
+      run: export ANSIBLE_ROLES_PATH="$(pwd)/ansible/roles"
+    - name: Install Drawbridge
+      run: ansible-playbook main.yml 
+      working-directory: ./ansible
+    - name: Run tests
+      run: py.test --hosts=localhost --connection=ansible --ansible-inventory=roles/drawbridge/tests/inventory roles/drawbridge/tests/test_drawbridge.py
+      working-directory: ./ansible
+    
