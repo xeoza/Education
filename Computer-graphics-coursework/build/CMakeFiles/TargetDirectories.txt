@@ -1,0 +1,3 @@
+/Users/zykinda/Documents/BMSTU/sparse-voxel-octrees/build/CMakeFiles/rebuild_cache.dir
+/Users/zykinda/Documents/BMSTU/sparse-voxel-octrees/build/CMakeFiles/edit_cache.dir
+/Users/zykinda/Documents/BMSTU/sparse-voxel-octrees/build/CMakeFiles/sparse-voxel-octrees.dir

@@ -1,0 +1,23 @@
+HTTP/1.1 200 OK
+Content-Type: text/html; charset=us-ascii
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hello world!</title>
+        <style>
+            body {
+                background-color: #242240;
+            }
+            h1 {
+                font-size: 4cm;
+                text-align: center;
+                color: #e5f0ff;
+                text-shadow: 0 0 2mm #bdccff;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Hello askfjbgjs world!</h1>
+    </body>
+</html>
